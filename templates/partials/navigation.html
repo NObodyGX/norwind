@@ -1,0 +1,53 @@
+<nav class="mt-10 flex justify-between">
+  {%- set start = 1 %}
+  {%- set end = paginator.number_pagers %}
+  {% if paginator.previous %}
+    <span>
+      <a href="{{ paginator.first }}">
+        <span class="inline-flex rounded-md shadow-sm">
+          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">First</span>
+        </span>
+      </a>
+      <a href="{{ paginator.previous }}">
+        <span class="inline-flex rounded-md shadow-sm">
+          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">Previous</span>
+        </span>
+      </a>
+    </span>
+  {% endif %}
+  {%- for i in range(start=start, end=end+1) -%}
+    {%- if i == paginator.current_index -%}
+      <a href="#">
+        <span class="inline-flex rounded-md shadow-sm">
+          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">{{i}}</span>
+        </span>
+      </a>
+    {%- elif i > 1 -%}
+      <a href="{{ paginator.base_url | safe }}{{ i ~ '/' }}{%- if uglyurls %}index.html{%- endif %}">
+        <span class="inline-flex rounded-md shadow-sm">
+          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">{{i}}</span>
+        </span>
+      </a>
+    {%- else -%}
+      <a href="{{ paginator.first | safe }}{%- if uglyurls %}index.html{%- endif %}">
+        <span class="inline-flex rounded-md shadow-sm">
+          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">{{i}}</span>
+        </span>
+      </a>
+    {%- endif -%}
+  {%- endfor -%}
+  {% if paginator.next %}
+    <span>
+      <a href="{{ paginator.next }}">
+        <span class="inline-flex rounded-md shadow-sm">
+          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">Next</span>
+        </span>
+      </a>
+      <a href="{{ paginator.last }}">
+        <span class="inline-flex rounded-md shadow-sm">
+          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">Last</span>
+        </span>
+      </a>
+    </span>
+  {% endif %}
+</nav>
