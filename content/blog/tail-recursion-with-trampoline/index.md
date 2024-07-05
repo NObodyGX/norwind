@@ -7,7 +7,6 @@ authors = ["Thomas Weitzel"]
 tags = ["javascript"]
 categories = ["eeveasn"]
 [extra]
-math = true
 image = "banner.jpg"
 +++
 

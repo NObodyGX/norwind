@@ -8,7 +8,6 @@ authors = ["AAbb", "AABBCC"]
 tags = ["zola", "shortcodes"]
 categories = ["learn"]
 [extra]
-math = true
 image = "banner.jpg"
 +++
 

@@ -7,7 +7,6 @@ authors = ["Thomas Weitzel"]
 tags = ["rust", "math"]
 categories = ["eeven", "ede"]
 [extra]
-math = true
 image = "banner.jpg"
 +++
 
