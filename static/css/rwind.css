@@ -1,0 +1,15 @@
+.img-swap-div .img-main {
+    display: block
+}
+
+.img-swap-div .img-swap {
+    display: none
+}
+
+.img-swap-div:hover .img-swap {
+    display: block
+}
+
+.img-swap-div:hover .img-main {
+    display: none
+}

@@ -1,0 +1,8 @@
+<div class="flexbin">
+  {% for source in sources -%}
+    {% set type = source | split(pat=".") | last -%}
+    <a>
+      <img src="{{ config.base_url | safe }}{{ page.path | safe }}{{ source | safe }}"/>
+    </a>
+  {% endfor -%}
+</div>
