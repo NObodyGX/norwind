@@ -1,53 +1,33 @@
-<nav class="mt-10 flex justify-between">
+ <ul class="pagination">
   {%- set start = 1 %}
   {%- set end = paginator.number_pagers %}
   {% if paginator.previous %}
-    <span>
-      <a href="{{ paginator.first }}">
-        <span class="inline-flex rounded-md shadow-sm">
-          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">First</span>
-        </span>
-      </a>
-      <a href="{{ paginator.previous }}">
-        <span class="inline-flex rounded-md shadow-sm">
-          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">Previous</span>
-        </span>
-      </a>
-    </span>
+    <li class="page-item"><a class="page-link" href="{{ paginator.first }}">首页</a></li>
+    <li class="page-item"><a class="page-link" href="{{ paginator.previous }}">上一页</a></li>
+  {%- else -%}
+    <li class="page-item disabled"><a class="page-link" href="{{ paginator.first }}">首页</a></li>
+    <li class="page-item disabled"><a class="page-link" href="{{ paginator.previous }}">上一页</a></li>
+  {% endif %}
+  {% if paginator.current_index > 3 %}
+    <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
   {% endif %}
   {%- for i in range(start=start, end=end+1) -%}
     {%- if i == paginator.current_index -%}
-      <a href="#">
-        <span class="inline-flex rounded-md shadow-sm">
-          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">{{i}}</span>
-        </span>
-      </a>
-    {%- elif i > 1 -%}
-      <a href="{{ paginator.base_url | safe }}{{ i ~ '/' }}{%- if uglyurls %}index.html{%- endif %}">
-        <span class="inline-flex rounded-md shadow-sm">
-          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">{{i}}</span>
-        </span>
-      </a>
-    {%- else -%}
-      <a href="{{ paginator.first | safe }}{%- if uglyurls %}index.html{%- endif %}">
-        <span class="inline-flex rounded-md shadow-sm">
-          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">{{i}}</span>
-        </span>
-      </a>
+      <li class="page-item active"><a class="page-link" href="#">{{i}}</a></li>
+    {%- elif i + 3 > paginator.current_index -%}
+      {%- if i < paginator.current_index + 3 -%}
+        <li class="page-item"><a class="page-link" href="{{ paginator.base_url | safe }}{{ i ~ '/' }}{%- if uglyurls %}index.html{%- endif %}">{{i}}</a></li>
+      {% endif %}
     {%- endif -%}
   {%- endfor -%}
-  {% if paginator.next %}
-    <span>
-      <a href="{{ paginator.next }}">
-        <span class="inline-flex rounded-md shadow-sm">
-          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">Next</span>
-        </span>
-      </a>
-      <a href="{{ paginator.last }}">
-        <span class="inline-flex rounded-md shadow-sm">
-          <span class="inline-flex items-center px-4 py-2 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-blue-600 hover:bg-blue-500 focus:outline-none focus:border-indigo-700 focus:shadow-outline-blue active:bg-blue-700 transition ease-in-out duration-150">Last</span>
-        </span>
-      </a>
-    </span>
+  {% if paginator.current_index + 2 < end %}
+    <li class="page-item disabled"><a class="page-link" href="#">...</a></li>
   {% endif %}
-</nav>
+  {% if paginator.next %}
+    <li class="page-item"><a class="page-link" href="{{ paginator.next }}">下一页</a></li>
+    <li class="page-item"><a class="page-link" href="{{ paginator.last }}">尾页</a></li>
+  {%- else -%}
+    <li class="page-item disabled"><a class="page-link" href="{{ paginator.next }}">下一页</a></li>
+    <li class="page-item disabled"><a class="page-link" href="{{ paginator.last }}">尾页</a></li>
+  {% endif %}
+</ul>

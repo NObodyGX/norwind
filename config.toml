@@ -2,7 +2,7 @@
 base_url = "https://example.org"
 
 # Whether to automatically compile all Sass files in the sass directory
-compile_sass = false
+compile_sass = true
 
 # The default language ("de" also included in i18n directory)
 default_language = "en"
@@ -35,7 +35,7 @@ extra_syntaxes_and_themes=[]
 # Put all your custom variables here
 
 # The title of the blog
-title = "Zolarwind"
+title = "norwind"
 
 # Path to the language resource files
 path_language_resources = "i18n/"
