@@ -3,10 +3,10 @@
   {%- set start = 1 %}
   {%- set end = paginator.number_pagers %}
   {% if paginator.previous %}
-    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100"><a class="page-link" href="{{ paginator.first }}">⏪</a></li>
+    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100"><a class="page-link" href="{{ paginator.first }}">⇇</a></li>
     <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100"><a class="page-link" href="{{ paginator.previous }}">⬅</a></li>
   {%- else -%}
-    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled"><a class="page-link" href="{{ paginator.first }}">⏪</a></li>
+    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled"><a class="page-link" href="{{ paginator.first }}">⇇</a></li>
     <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled"><a class="page-link" href="{{ paginator.previous }}">⬅</a></li>
   {% endif %}
   {% if paginator.current_index > 3 %}
@@ -14,7 +14,7 @@
   {% endif %}
   {%- for i in range(start=start, end=end+1) -%}
     {%- if i == paginator.current_index -%}
-      <li class="p-1 mr-3 rounded-full bg-blue-500 rounded-full h-8 w-8 text-white flex items-center justify-center cursor-pointer hover:bg-blue-700"><a class="page-link" href="#">{{i}}</a></li>
+      <li class="p-1 mr-3 rounded-full text-red-600 rounded-full h-8 w-8 text-white flex items-center justify-center cursor-pointer hover:bg-blue-700"><a class="page-link" href="#">{{i}}</a></li>
     {%- elif i + 3 > paginator.current_index -%}
       {%- if i < paginator.current_index + 3 -%}
         <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100"><a class="page-link" href="{{ paginator.base_url | safe }}{{ i ~ '/' }}{%- if uglyurls %}index.html{%- endif %}">{{i}}</a></li>
@@ -22,14 +22,14 @@
     {%- endif -%}
   {%- endfor -%}
   {% if paginator.current_index + 2 < end %}
-    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled"><a class="page-link" href="#">...</a></li>
+    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled:text-slate-500"><a class="page-link" href="#">...</a></li>
   {% endif %}
   {% if paginator.next %}
     <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100"><a class="page-link" href="{{ paginator.next }}">➡</a></li>
-    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100"><a class="page-link" href="{{ paginator.last }}">⏩</a></li>
+    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100"><a class="page-link" href="{{ paginator.last }}">⇉</a></li>
   {%- else -%}
-    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled"><a class="page-link" href="{{ paginator.next }}">➡</a></li>
-    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled"><a class="page-link" href="{{ paginator.last }}">⏩</a></li>
+    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled:text-slate-500"><a class="page-link" href="{{ paginator.next }}">➡</a></li>
+    <li class="p-1 mr-3 rounded-full cursor-pointer h-8 w-8 border-solid border-0 flex items-center justify-center border-gray-400 hover:bg-blue-100 disabled:text-slate-500"><a class="page-link" href="{{ paginator.last }}">⇉</a></li>
   {% endif %}
 </ul>
 </div>

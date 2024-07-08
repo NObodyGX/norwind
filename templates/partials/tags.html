@@ -2,7 +2,7 @@
 {% if page.taxonomies %}
   {% if page.taxonomies.tags %}
     {% for tag in page.taxonomies.tags %}
-      <span class="mr-2 badge badge-green"><a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a></span>
+      <span class="mr-2 badge inline-flex items-center rounded-md bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20"><a href="{{ get_taxonomy_url(kind="tags", name=tag) }}">{{ tag }}</a></span>
     {% endfor %}
   {% endif %}
 {% endif %}
