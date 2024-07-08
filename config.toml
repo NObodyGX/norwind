@@ -60,15 +60,13 @@ quote = { text = "Just Do It.", author = "Yes" }
 
 # The main navigation menu
 menu_pages = [
-    { title = "tags",                url = "/tags/"   },
-    { title = "categories",                url = "/categories/"   },
-    { title = "authors",                url = "/authors/"   },
+    { title = "tags", url = "/tags/"   },
+    { title = "categories", url = "/categories/"   },
+    { title = "authors", url = "/authors/"   },
 ]
 
 # The pages that appear in the footer
 footer_pages = [
-    { title = "Privacy Policy",       url = "/pages/privacy/" },
-    { title = "Terms",                url = "/pages/terms/"   },
 ]
 
 # Social links
