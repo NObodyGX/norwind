@@ -5,7 +5,7 @@ description = "Deconstructing the math of investment: estimate the annualized ra
 [taxonomies]
 tags = ["rust", "math"]
 categories = ["eeven", "ede"]
-authors = ["Thomas Weitzel"]
+authors = ["nobodygx"]
 [extra]
 image = "banner.jpg"
 +++

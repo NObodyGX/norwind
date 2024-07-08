@@ -97,7 +97,7 @@ console.log(isEvenPermutation([1, 3, 2]));
 
 ## Source code
 
-I have created this [GitHub Gist](https://gist.github.com/thomasweitzel/3fd3197616f0299a2935972edd68bd4a) with the complete HTML page including the JavaScript source code.
+I have created this [GitHub Gist](https://gist.github.com/nobodygx/3fd3197616f0299a2935972edd68bd4a) with the complete HTML page including the JavaScript source code.
 It runs in the browser and uses just [Tailwind CSS](https://tailwindcss.com) for styling and plain ES6-style JavaScript.
 The source code can be used for all square board sizes, not only 4 by 4.
 You have to adjust the boards GUI or dynamically generate it - it's easy. 

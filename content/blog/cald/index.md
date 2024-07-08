@@ -5,7 +5,7 @@ description = "test for shortcodes-imgswap"
 [taxonomies]
 tags = ["zola", "shortcodes"]
 categories = ["learn"]
-authors = ["AAbb"]
+authors = ["aabb"]
 [extra]
 image = "banner.jpg"
 +++

@@ -5,7 +5,7 @@ description = "Deconstructing the math of investment: estimate the annualized ra
 [taxonomies]
 tags = ["rust", "math"]
 categories = ["eeven", "a"]
-authors = ["AAbb"]
+authors = ["aabb"]
 [extra]
 image = "banner.jpg"
 +++

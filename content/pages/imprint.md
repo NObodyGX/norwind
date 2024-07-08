@@ -3,11 +3,11 @@ date = 2019-03-11
 title = "Imprint"
 description = "Necessary legal stuff"
 template = "page.html"
-authors = ["Thomas Weitzel"]
+authors = ["nobodygx"]
 +++
 
 <!-- Add two spaces after each line to enforce line break -->
-> *Thomas Weitzel*  
+> *nobodygx*  
 > *Theodor-Heuss-Str. 21*  
 > *63225 Langen (Hesse)*  
 > *Germany*  

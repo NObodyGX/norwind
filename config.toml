@@ -50,13 +50,13 @@ generator = "Zola v0.19.1"
 favicon_svg = "/img/yin-yang.svg"
 
 # The copyright notice
-copyright = "Copyright {year} by Thomas Weitzel"
+copyright = "Copyright {year} by NObodyGX"
 
 # The description shown on banner
-site_description = "My findings while exploring various aspects of programming"
+site_description = "It's a world, about your loving things"
 
 # The quote shown on banner
-quote = { text = "Do, or not do. There is no try.", author = "Yoda" }
+quote = { text = "Just Do It.", author = "Yes" }
 
 # The main navigation menu
 menu_pages = [
