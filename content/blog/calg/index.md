@@ -2,10 +2,10 @@
 date = 2023-07-29
 title = "calg"
 description = "Deconstructing the math of investment: estimate the annualized rate of return with the IRR algorithm and its Rust implementation."
-authors = ["Thomas Weitzel"]
 [taxonomies]
 tags = ["rust", "math"]
 categories = ["eeven", "eeasd"]
+authors = ["aabb"]
 [extra]
 image = "banner.jpg"
 +++

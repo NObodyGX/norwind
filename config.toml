@@ -20,6 +20,7 @@ generate_feeds = true
 taxonomies = [
     { name = "tags", feed = false},
     { name = "categories", feed = false},
+    { name = "authors", feed = false},
 ]
 
 [markdown]
@@ -61,6 +62,7 @@ quote = { text = "Do, or not do. There is no try.", author = "Yoda" }
 menu_pages = [
     { title = "tags",                url = "/tags/"   },
     { title = "categories",                url = "/categories/"   },
+    { title = "authors",                url = "/authors/"   },
 ]
 
 # The pages that appear in the footer

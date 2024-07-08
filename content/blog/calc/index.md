@@ -2,11 +2,10 @@
 date = 2024-05-01
 title = "testa"
 description = "test for shortcodes-img"
-authors = ["AAbb", "AABBCC"]
-
 [taxonomies]
 tags = ["zola", "shortcodes"]
 categories = ["learn"]
+authors = ["AAbb"]
 [extra]
 image = "banner.jpg"
 +++

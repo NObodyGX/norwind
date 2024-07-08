@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="max-w-7xl mx-auto pt-8 px-4 sm:px-6 lg:px-8">
+  <h1 class="text-center lg:text-left">
+    {{ res.tags.other | capitalize }}
+  </h1>
+  {% for tag in terms %}
+    <a
+      href="{{tag.permalink}}"
+      class="btn btn-success"
+    >
+      {{tag.name}}
+      <span class="badge bg-success">{{tag.pages | length}}</span>
+    </a>
+  {% endfor %}
+</div>
+{% endblock content %}

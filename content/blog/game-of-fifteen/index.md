@@ -2,10 +2,11 @@
 date = 2020-06-11
 title = "The Game of Fifteen"
 description = "A playable online game. Not every possible starting position is solvable, so we have to take special care."
-authors = ["Thomas Weitzel"]
+
 [taxonomies]
 tags = ["javascript"]
 categories = ["eeven", "ee"]
+authors = ["aabb"]
 [extra]
 math = false
 image = "banner.jpg"
